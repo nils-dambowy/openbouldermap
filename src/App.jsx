@@ -14,7 +14,7 @@ function App() {
           <tr>Option 2</tr>
           <tr>Option 3</tr>
           <tr>Option 4</tr>
-          <tr>Option 52</tr>
+          <tr>Option 5</tr>
         </thead>
       </table>
       <Map/>

@@ -31,6 +31,11 @@ This overwrites the black settings and adds the default text color
   color: #ffffff;
   background: rgb(2,0,36);
   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 28%, rgba(2,155,217,1) 53%, rgba(3,141,208,1) 59%, rgba(9,9,121,1) 96%);
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1.5px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
 }
 
 .container{
