@@ -114,15 +114,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-(last updated 29.08.2024)
-- [ ] add a search function to search for locations
+(last updated 30.08.2024)
+- [x] add a search function to search for locations
 - [ ] Dropdown Menu
 - [ ] add some boulders
 - [ ] Marker functionality
   - [ ] let users add markers
   - [ ] save added markers
   - [ ] showcase marker groups(bouldering areas?)
-  - [ ] make the side less uglier :(
+- [ ] add mobile functionality
+- [ ] make the side less uglier :(
 
 See the [open issues](https://github.com/nils-dambowy/openbouldermap/issues) for a full list of proposed features (and known issues).
 
