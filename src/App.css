@@ -3,6 +3,15 @@
   margin: 0;
   padding: 0;
 }
+/* 
+No idea why the Searchbar is black.
+This overwrites the black settings and adds the default text color
+*/
+.leaflet-control-geosearch form input {
+  background-color: white;
+  color:#76777FFF;
+}
+
 
 #root {
   height: 100vh;

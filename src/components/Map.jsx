@@ -1,8 +1,8 @@
 import { MapContainer, TileLayer, useMap} from 'react-leaflet';
-import "leaflet/dist/leaflet.css";
-import "../App.css";
 import { useEffect} from 'react';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
+import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
+import "../App.css";
 
 const SearchField = (props) => {
   const map = useMap();
@@ -27,11 +27,7 @@ export default function Map() {
   return (
 
      <MapContainer center={[51.505, -0.09]} zoom={13}>
-      <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <SearchField
+       <SearchField
           showMarker={false}
           showPopup={false}
           popupFormat={({ query, result }) => result.label}
@@ -41,6 +37,11 @@ export default function Map() {
           searchLabel={"Enter address, please"}
           keepResult={false}
         />
+      <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+       
     </MapContainer>
 
   )
