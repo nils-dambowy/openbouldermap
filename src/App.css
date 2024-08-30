@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +17,7 @@ This overwrites the black settings and adds the default text color
 
 .leaflet-container {
   border-radius: 15px;
-  box-shadow: 0 0 0 6px #fff;
+  box-shadow: 0 0 0 8px #fff;
 }
 
 #root {
@@ -31,26 +32,21 @@ This overwrites the black settings and adds the default text color
   color: #ffffff;
   background: rgb(2,0,36);
   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 28%, rgba(2,155,217,1) 53%, rgba(3,141,208,1) 59%, rgba(9,9,121,1) 96%);
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1.5px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
 }
 
+#root h1{
+  text-shadow: 0 0 10px #0062ff;
+}
 .container{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-}
-
-.container table{
-  float: left;
-  width: 100px;
+  align-items: center;
 }
 
 /* height of the container */
 .leaflet-container {
   height: 90vh;
-  width: 70vw;
+  width: 90vw;
 }

@@ -5,7 +5,8 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <h1>OpenBoulderMap</h1>
+    <h1> 🏔️OpenBoulderMap 🏔️</h1>
     <App />
+    <p>Made with ❤️</p>
   </StrictMode>
 )
