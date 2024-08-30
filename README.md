@@ -122,6 +122,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] let users add markers
   - [ ] save added markers
   - [ ] showcase marker groups(bouldering areas?)
+- [ ] add mobile functionality
 - [ ] make the side less uglier :(
 
 See the [open issues](https://github.com/nils-dambowy/openbouldermap/issues) for a full list of proposed features (and known issues).
