@@ -10,8 +10,11 @@ function App() {
      <div className="container">
       <table>
         <thead>
-          <tr>test row</tr>
-          <tr>test row</tr>
+          <tr>Option 1</tr>
+          <tr>Option 2</tr>
+          <tr>Option 3</tr>
+          <tr>Option 4</tr>
+          <tr>Option 52</tr>
         </thead>
       </table>
       <Map/>
