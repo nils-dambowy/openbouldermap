@@ -8,7 +8,11 @@ import DropdownMenu from './components/DropdownMenu';
 function App() {
   return (
      <div className="container">
+      <div className="navbar-container">
+      <DropdownMenu/>
+      </div>
       <Map/>
+      
      </div>
   )
 }

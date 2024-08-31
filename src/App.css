@@ -15,6 +15,11 @@ This overwrites the black settings and adds the default text color
   color:#76777FFF;
 }
 
+/* Makes sure that the dropdown menu is not showing up behind the search bar */
+.leaflet-geosearch-bar {
+  z-index: 500;
+}
+
 .leaflet-container {
   border-radius: 15px;
   box-shadow: 0 0 0 8px #fff;
@@ -44,9 +49,31 @@ This overwrites the black settings and adds the default text color
   justify-content: flex-end;
   align-items: center;
 }
-
 /* height of the container */
 .leaflet-container {
-  height: 90vh;
-  width: 90vw;
+  height: 80vh;
+  width: 100vw;
+  margin-top: 75px;
+}
+
+.container .navbar-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+}
+
+/* need higher z-index than the searh bar to make sure the dropdown menu is not showing behind the search bar */
+.navdrop{
+  z-index: 1000;
 }
