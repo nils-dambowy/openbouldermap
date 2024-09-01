@@ -116,7 +116,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 (last updated 30.08.2024)
 - [x] add a search function to search for locations
-- [ ] Dropdown Menu
+- [x] Dropdown Menu
 - [ ] add some boulders
 - [ ] Marker functionality
   - [ ] let users add markers
