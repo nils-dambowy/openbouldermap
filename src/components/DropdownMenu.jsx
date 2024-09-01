@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "../App.css";
 
-function BasicExample() {
+function DropdownMenu() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary sticky-nav">
       <Container>
@@ -59,4 +59,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default DropdownMenu;
