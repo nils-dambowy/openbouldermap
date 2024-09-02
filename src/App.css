@@ -101,3 +101,8 @@ This overwrites the black settings and adds the default text color
 .navdrop{
   z-index: 1000;
 }
+
+#footer{
+  height: 50px;
+  padding: 10px;
+}
