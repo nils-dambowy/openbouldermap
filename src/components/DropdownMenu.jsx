@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import "../App.css";
 
 function DropdownMenu() {
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary sticky-nav">
       <Container>
@@ -20,7 +21,7 @@ function DropdownMenu() {
               <NavDropdown.Item href="#action/3.5"> Africa</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Functions" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Add a marker</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -46,7 +47,7 @@ function DropdownMenu() {
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Set Location</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
