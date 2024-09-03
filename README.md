@@ -114,7 +114,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-(last updated 30.08.2024)
+(last updated 03.09.2024)
 - [x] add a search function to search for locations
 - [x] Dropdown Menu
 - [x] Marker functionality
