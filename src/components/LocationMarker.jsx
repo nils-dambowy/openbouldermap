@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
-import L from "leaflet";
-import icon from '../util/icon';
 
 /* 
 Disclamer: This is a edited copy of the code from the React Leaflet documentation.  
