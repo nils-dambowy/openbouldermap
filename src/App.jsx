@@ -1,6 +1,5 @@
 import Map from './components/Map';
 import './App.css';
-import "leaflet/dist/leaflet.css";
 import "../node_modules/leaflet-geosearch/dist/geosearch.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownMenu from './components/DropdownMenu';
