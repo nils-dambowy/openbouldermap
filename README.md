@@ -118,7 +118,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] add a search function to search for locations
 - [x] Dropdown Menu
 - [x] Marker functionality
-  - [x] let users add markers ( right now, only one marker add the time)
+  - [x] let users add markers (  ~~right now, only one marker add the time ~~ multiple markers are now supported)
   - [ ] add some preconfigured markers
   - [ ] save added markers
   - [ ] showcase marker groups(bouldering areas?)
