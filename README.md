@@ -122,6 +122,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] add some preconfigured markers
   - [ ] save added markers
   - [ ] showcase marker groups(bouldering areas?)
+- [ ] search queries for user ( nearby boulders)
 - [ ] add mobile functionality
 - [ ] make the side less uglier :(
 
