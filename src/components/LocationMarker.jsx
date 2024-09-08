@@ -11,7 +11,7 @@ const marker_arr = await getBoulderLocations();
 
 export default function LocationMarker() {
 
-  const [pos, setPosition] = useState(null)
+  const [, setPosition] = useState(null);
   useMapEvents({
     click(e) {
       //map.locate()
