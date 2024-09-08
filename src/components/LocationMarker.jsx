@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
 import { uploadBoulders, getBoulderLocations } from '../util/client';
+import { uuidv7 } from "uuidv7";
 
 /* 
 Disclamer: This is a edited copy of the code from the React Leaflet documentation.  
@@ -26,8 +27,9 @@ export default function LocationMarker() {
   })
 
   return marker_arr.map((pos) =>{
+    const identifier = uuidv7();
     return(
-      <Marker position={pos} key="marker">
+      <Marker position={pos} key={identifier}>
           <Popup>You are here</Popup>
       </Marker>
     );
