@@ -32,7 +32,6 @@ export default function Map() {
        <SearchField
           showMarker={false}
           showPopup={false}
-          popupFormat={({ query, result }) => result.label}
           retainZoomLevel={false}
           animateZoom={true}
           autoClose={false}
