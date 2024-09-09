@@ -117,3 +117,9 @@ This overwrites the black settings and adds the default text color
   border-radius: 15px;
   box-shadow: 0 0 0 1px #000000;
 }
+
+/* fixes the issue that the text color of the results is white*/
+.results{
+  background-color: white;
+  color:#76777FFF;
+}
