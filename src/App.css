@@ -1,6 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* overwrites the default bootstrap container */
+@media (min-width: 768px){
+  .container{
+    max-width:80% !important;
+  }  
+}
+
+@media (min-width: 992px){
+  .container{
+    max-width:80% !important;
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    max-width:80% !important;
+  }  
+}
+
+@media (min-width: 1400px){
+  .container{
+    max-width:80% !important;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -27,8 +56,8 @@ This overwrites the black settings and adds the default text color
 }
 
 #root {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +79,7 @@ This overwrites the black settings and adds the default text color
   display: inline-block;
   background-color: #6d6c6a; /* Set the background color */
   transform: rotate(-1deg); /* Rotate the background */
-  padding: 10px; /* Add some padding */
+  padding: 1vh; /* Add some padding */
   box-shadow: 0 0 15px #0000008f; /* Add some text shadow */
   border-radius: 15px;
 }
@@ -74,12 +103,13 @@ This overwrites the black settings and adds the default text color
 }
 /* height of the container */
 .leaflet-container {
-  height: 80vh;
-  width: 100vw;
-  margin-top: 75px;
+  height: 80vh; 
+  margin-top: 3vh;
+  width: 80vw;
 }
 
 .container .navbar-container{
+  height:50px;
   position: absolute;
   top: 0;
   left: 0;
@@ -87,15 +117,16 @@ This overwrites the black settings and adds the default text color
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 }
 
+/*
 .sticky-nav {
   position: sticky;
   top: 0;
   height: 50px;
 }
+*/
 
 /* need higher z-index than the searh bar to make sure the dropdown menu is not showing behind the search bar */
 .navdrop{
@@ -103,8 +134,8 @@ This overwrites the black settings and adds the default text color
 }
 
 #footer{
-  height: 50px;
-  padding: 10px;
+  height: 1vh;
+  padding: 1vh;
 }
 
 .edit-location-button {
