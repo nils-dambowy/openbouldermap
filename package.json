@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@sanity/client": "^6.21.3",
+    "@sanity/studio-secrets": "^3.0.0",
     "bootstrap": "^5.3.3",
     "leaflet": "^1.9.4",
     "leaflet-geosearch": "^4.0.0",
