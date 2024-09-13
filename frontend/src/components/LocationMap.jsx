@@ -4,7 +4,7 @@ import "../App.css";
 import L from "leaflet";
 
 export default function LocationMarker() {
-   const btnRef = useRef(null);
+    const btnRef = useRef(null);
     const map = useMap();
 
     /* prevents the button from triggering the map click event */
