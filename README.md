@@ -26,6 +26,9 @@
 
   <p align="center">
     A simple map that lets you explore boulders in your local area!
+    docker build -t obm:dev .   
+    docker run -p 5173:5173 -v /app/node_modules -v $(pwd):/app  obm:dev
+    
     <br />
     <a href="https://github.com/nils-dambowy/openbouldermap"><strong>Explore the docs »</strong></a>
     <br />
