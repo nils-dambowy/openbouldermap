@@ -3,8 +3,8 @@ import { useEffect} from 'react';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
 import "../App.css";
-import LocationMarker from './LocationMarker';
-import LocationMap from './LocationMap';
+import LocateButton from './LocateButton';
+import BoulderMarker from './BoulderMarker';
 
 const SearchField = (props) => {
   const map = useMap();
@@ -42,8 +42,8 @@ export default function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-    <LocationMarker />
-    <LocationMap />
+    <BoulderMarker/>
+    <LocateButton/>
     </MapContainer>
 
   )

@@ -10,7 +10,7 @@ Disclamer: This is a edited copy of the code from the React Leaflet documentatio
 // for pre-configured markers
 const marker_arr = await getBoulderLocations();
 
-export default function LocationMarker() {
+export default function BoulderMarker() {
 
   const [, setPosition] = useState(null);
   useMapEvents({

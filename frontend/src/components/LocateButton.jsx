@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import "../App.css";
 import L from "leaflet";
 
-export default function LocationMarker() {
+export default function LocateButton() {
     const btnRef = useRef(null);
     const map = useMap();
 
