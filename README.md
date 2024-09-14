@@ -26,6 +26,8 @@
 
   <p align="center">
     A simple map that lets you explore boulders in your local area!
+
+    
     <br />
     <a href="https://github.com/nils-dambowy/openbouldermap"><strong>Explore the docs »</strong></a>
     <br />
@@ -70,7 +72,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+    docker build -t obm:dev .   
+    docker run -p 5173:5173 -v /app/node_modules -v $(pwd):/app  obm:dev
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
