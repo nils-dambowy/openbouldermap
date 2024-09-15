@@ -13,14 +13,15 @@ const marker_arr = await getBoulderLocations();
 export default function BoulderMarker() {
 
   const [, setPosition] = useState(null);
+  
   useMapEvents({
     click(e) {
       //map.locate()
       const p = e.latlng;
       // store boulder
-      uploadBoulders("Boulder", String(p.lat) + "," + String(p.lng));
+      //uploadBoulders("Boulder", String(p.lat) + "," + String(p.lng));
       // 
-      marker_arr.push(p);
+      //marker_arr.push(p);
       console.log(e.latlng);
       setPosition(e.latlng);
     },

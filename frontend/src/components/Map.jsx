@@ -5,6 +5,7 @@ import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
 import "../App.css";
 import LocateButton from './LocateButton';
 import BoulderMarker from './BoulderMarker';
+import BoulderPopup from './BoulderPopup';
 
 const SearchField = (props) => {
   const map = useMap();
@@ -44,6 +45,7 @@ export default function Map() {
         />
     <BoulderMarker/>
     <LocateButton/>
+    <BoulderPopup />
     </MapContainer>
 
   )
