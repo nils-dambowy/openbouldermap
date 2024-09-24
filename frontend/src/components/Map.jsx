@@ -28,8 +28,8 @@ const SearchField = (props) => {
 
 export default function Map() {
   return (
-
-     <MapContainer center={[51.505, -0.09]} zoom={13}>
+     // default location is fontainebleau, france because why not
+     <MapContainer center={[48.405, 2.702]} zoom={13}>
        <SearchField
           showMarker={false}
           showPopup={false}

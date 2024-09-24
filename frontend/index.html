@@ -10,6 +10,17 @@
     <title>openBoulderMap</title>
   </head>
   <body>
+    <script>
+      let userAgentString =  navigator.userAgent; 
+      let chromeAgent = userAgentString.indexOf("Chrome") > -1; 
+
+      if (chromeAgent) {
+        // tempory solution until I figure out how to
+        // make the third party cookies in chrome and Sanity
+        console.log("Chrome detected");
+        alert("This application is not supported in Google Chrome.");
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
