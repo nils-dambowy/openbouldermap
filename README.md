@@ -26,17 +26,6 @@
 
   <p align="center">
     A simple map that lets you explore boulders in your local area!
-
-    
-    <br />
-    <a href="https://github.com/nils-dambowy/openbouldermap"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/nils-dambowy/openbouldermap">View Demo</a>
-    ·
-    <a href="https://github.com/nils-dambowy/openbouldermap/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/nils-dambowy/openbouldermap/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
