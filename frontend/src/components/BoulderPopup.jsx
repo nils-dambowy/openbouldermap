@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { useMapEvents, Marker, Popup, useMap } from 'react-leaflet';
+import { useMapEvents, useMap } from 'react-leaflet';
 import L from "leaflet";
-import React from 'react';
-import { uploadBoulders, getBoulderLocations } from '../util/client';
+import { uploadBoulders} from '../util/client';
 
 export default function BoulderPopup() {
     const map = useMap();
