@@ -16,8 +16,14 @@ export default function LocateButton() {
       e.stopPropagation(); 
       L.DomEvent.stopPropagation(e);
       map.locate().on("locationfound", function (e) {
+        console.log("location found");
         map.flyTo(e.latlng, map.getZoom());
       });
+      map.on('locationerror', function(e) {
+        console.log(e);
+        alert(e.message);
+      });
+      
     };
 
     return(
