@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
-import { uploadBoulders, getBoulderLocations } from '../util/client';
+import { getBoulderLocations } from '../util/client';
 import { uuidv7 } from "uuidv7";
 
 /* 
@@ -17,7 +17,6 @@ export default function BoulderMarker() {
   useMapEvents({
     click(e) {
       //map.locate()
-      const p = e.latlng;
       // store boulder
       //uploadBoulders("Boulder", String(p.lat) + "," + String(p.lng));
       // 
