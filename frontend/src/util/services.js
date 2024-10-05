@@ -1,4 +1,4 @@
-const backendUrl = "cgregarious-exploration"
+const backendUrl = "gregarious-exploration"
 
 async function fetchMovies() {
     try {
