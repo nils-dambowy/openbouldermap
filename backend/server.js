@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
-const port = process.env.MONGOPORT;
-const uri = process.env.MONGO_URL;  
+const port = ${{MongoDB.MONGOPORT}};
+const uri = ${{MongoDB.MONGO_URL}};  
 
 app.use(cors());
 app.use(express.json());
@@ -18,6 +18,7 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     console.log('Connected to MongoDB');
   })
   .catch(error => console.error('Error connecting to MongoDB:', error));
+
 
 app.post('/add-movie', async (req, res) => {
   try {
