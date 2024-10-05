@@ -1,32 +1,19 @@
-import { MapContainer, TileLayer, useMap} from 'react-leaflet';
-import { useEffect} from 'react';
-import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
+import { MapContainer, TileLayer} from 'react-leaflet';
+import { useState} from 'react';
 import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
 import "../App.css";
 import LocateButton from './LocateButton';
+import ChangeMapButton from './ChangeMapButton';
 import BoulderMarker from './BoulderMarker';
 import BoulderPopup from './BoulderPopup';
+import SearchField from './SearchField';
 
-const SearchField = (props) => {
-  const map = useMap();
-
-  useEffect(() => {
-    const searchControl = new GeoSearchControl({
-      provider: new OpenStreetMapProvider(),
-      style: "bar",
-      ...props
-    });
-    map.addControl(searchControl);
-    map.on("geosearch/showlocation", function (e) {
-      console.log(e.location);
-    });
-    return () => map.removeControl(searchControl);
-  }, [map, props]);
-
-  return null;
-};
 
 export default function Map() {
+  const [tileLayerUrl, setTileLayerUrl] = useState(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  );
+
   return (
      // default location is fontainebleau, france because why not
      <MapContainer center={[48.405, 2.702]} zoom={13}>
@@ -41,11 +28,12 @@ export default function Map() {
         />
       <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url={tileLayerUrl}
         />
-    <BoulderMarker/>
-    <LocateButton/>
-    <BoulderPopup />
+      <BoulderMarker/>
+      <ChangeMapButton URL={tileLayerUrl} changeMapFunction={setTileLayerUrl}/>
+      <LocateButton/>
+      <BoulderPopup />
     </MapContainer>
 
   )
