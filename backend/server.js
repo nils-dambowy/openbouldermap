@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
-const port = process.env.MONGOPORT;
-const uri = process.env.MONGO_URL;  // Your MongoDB URI from Railway
+const port = ${{MongoDB.MONGOPORT}};
+const uri = process.env.MONGO_URL;  
 
 app.use(cors());
 app.use(express.json());
@@ -14,12 +14,11 @@ let db;
 
 MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(client => {
-    db = client.db('openbouldermap');  // Replace with your actual DB name
+    db = client.db('openbouldermap');  
     console.log('Connected to MongoDB');
   })
   .catch(error => console.error('Error connecting to MongoDB:', error));
 
-// Example route to add a document to a MongoDB collection
 app.post('/add-movie', async (req, res) => {
   try {
     const movie = req.body;
