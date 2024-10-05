@@ -20,22 +20,22 @@ MongoClient.connect(uri)
   .catch(error => console.error('Error connecting to MongoDB:', error));
 
 
-app.post('/add-movie', async (req, res) => {
+app.post('/add-boulder', async (req, res) => {
   try {
     const movie = req.body;
     const result = await db.collection('boulders').insertOne(movie);
-    res.status(200).json({ message: 'Movie added!', id: result.insertedId });
+    res.status(200).json({ message: 'Boulder added!', id: result.insertedId });
   } catch (error) {
-    res.status(500).json({ message: 'Error adding movie', error });
+    res.status(500).json({ message: 'Error adding boulder', error });
   }
 });
 
-app.get('/movies', async (req, res) => {
+app.get('/boulders', async (req, res) => {
     try {
       const movies = await db.collection('boulders').find().toArray();
       res.status(200).json(movies);
     } catch (error) {
-      res.status(500).json({ message: 'Error fetching movies', error });
+      res.status(500).json({ message: 'Error fetching boulders', error });
     }
   });
 
