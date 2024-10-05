@@ -5,7 +5,7 @@ const app = express();
 require('dotenv').config();
 
 const port = ${{MongoDB.MONGOPORT}};
-const uri = process.env.MONGO_URL;  
+const uri = ${{MongoDB.MONGO_URL}};
 
 app.use(cors());
 app.use(express.json());
