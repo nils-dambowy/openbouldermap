@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
-const port = process.env.PORT || 5000;
-const uri = process.env.MONGODB_URI;  // Your MongoDB URI from Railway
+const port = process.env.MONGOPORT;
+const uri = process.env.MONGO_URL;  // Your MongoDB URI from Railway
 
 app.use(cors());
 app.use(express.json());
