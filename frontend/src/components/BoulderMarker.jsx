@@ -38,9 +38,11 @@ export default function BoulderMarker() {
     },
   })
 
+  
+
   return marker_arr.map((pos) =>{
     const identifier = uuidv7();
-    const latlng = {lat: pos.lat, lng: pos.long};
+    const latlng = {"lat": pos.lat, "lng": pos.long};
     return(
       <Marker position={latlng} key={identifier}>
           <Popup>{pos.description}</Popup>
