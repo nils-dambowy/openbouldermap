@@ -14,7 +14,7 @@ let db;
 
 MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(client => {
-    db = client.db('your-database-name');  // Replace with your actual DB name
+    db = client.db('openbouldermap');  // Replace with your actual DB name
     console.log('Connected to MongoDB');
   })
   .catch(error => console.error('Error connecting to MongoDB:', error));
@@ -23,7 +23,7 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 app.post('/add-movie', async (req, res) => {
   try {
     const movie = req.body;
-    const result = await db.collection('movies').insertOne(movie);
+    const result = await db.collection('boulders').insertOne(movie);
     res.status(200).json({ message: 'Movie added!', id: result.insertedId });
   } catch (error) {
     res.status(500).json({ message: 'Error adding movie', error });
