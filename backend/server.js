@@ -22,8 +22,8 @@ MongoClient.connect(uri)
 
 app.post('/add-boulder', async (req, res) => {
   try {
-    const movie = req.body;
-    const result = await db.collection('boulders').insertOne(movie);
+    const boulder = req.body;
+    const result = await db.collection('boulders').insertOne(boulder);
     res.status(200).json({ message: 'Boulder added!', id: result.insertedId });
   } catch (error) {
     res.status(500).json({ message: 'Error adding boulder', error });
@@ -32,8 +32,8 @@ app.post('/add-boulder', async (req, res) => {
 
 app.get('/boulders', async (req, res) => {
     try {
-      const movies = await db.collection('boulders').find().toArray();
-      res.status(200).json(movies);
+      const boulders = await db.collection('boulders').find().toArray();
+      res.status(200).json(boulders);
     } catch (error) {
       res.status(500).json({ message: 'Error fetching boulders', error });
     }
