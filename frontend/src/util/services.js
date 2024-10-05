@@ -1,6 +1,6 @@
-const backendUrl = "gregarious-exploration"
+const backendUrl = "https://gregarious-exploration-production.up.railway.app/"
 
-async function fetchMovies() {
+export async function fetchMovies() {
     try {
         const response = await fetch(`${backendUrl}/movies`);
         if (!response.ok) {
@@ -13,5 +13,3 @@ async function fetchMovies() {
         throw error;
     }
 }
-
-fetchMovies();

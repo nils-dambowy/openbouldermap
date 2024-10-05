@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useMapEvents, useMap } from 'react-leaflet';
 import L from "leaflet";
+import { fetchMovies } from '../util/services';
 
 export default function BoulderPopup() {
   const map = useMap();
@@ -40,6 +41,7 @@ return(<>
         <button onClick={() => {
                                  L.marker(pos).bindPopup(text).addTo(map);
                                  // uploadBoulders("Boulder", String(pos.lat) + "," + String(pos.lng));
+                                 console.log(fetchMovies());
                                  setPopup(false);
         }}>Confirm</button>
         </div>
