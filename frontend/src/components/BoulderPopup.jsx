@@ -40,7 +40,7 @@ return(<>
 
         <button onClick={() => {
                                  L.marker(pos).bindPopup(text).addTo(map);
-                                 addBoulder({description: text, lat: pos.lat, long: pos.lng});
+                                 addBoulder({description: text, lat: pos.lat, lng: pos.lng});
                                  setPopup(false);
         }}>Confirm</button>
         </div>
