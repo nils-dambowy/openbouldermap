@@ -1,4 +1,4 @@
-const backendUrl = "https://gregarious-exploration-production.up.railway.app/"
+const backendUrl = "https://gregarious-exploration-production.up.railway.app"
 
 export async function fetchMovies() {
     try {
