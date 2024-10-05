@@ -34,7 +34,7 @@ export default function BoulderMarker() {
     const latlng = {"lat": pos.lat, "lng": pos.lng};
     return(
       <Marker position={latlng} key={identifier}>
-          <Popup>You are here</Popup>
+          <Popup>{pos.description || 'Boulder description is missing :('}</Popup>
       </Marker>
     );
   });
