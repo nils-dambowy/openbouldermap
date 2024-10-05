@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
-import { getBoulderLocations } from '../util/client';
 import { uuidv7 } from "uuidv7";
 
 /* 
@@ -8,7 +7,8 @@ Disclamer: This is a edited copy of the code from the React Leaflet documentatio
 */
 
 // for pre-configured markers
-const marker_arr = await getBoulderLocations();
+//const marker_arr = await getBoulderLocations();
+const marker_arr = [];
 
 export default function BoulderMarker() {
 

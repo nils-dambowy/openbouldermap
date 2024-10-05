@@ -10,17 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@sanity/client": "^6.21.3",
-    "@sanity/studio-secrets": "^3.0.0",
     "bootstrap": "^5.3.3",
+    "express": "^4.21.0",
     "leaflet": "^1.9.4",
     "leaflet-geosearch": "^4.0.0",
+    "mongodb": "^6.9.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
     "react-scripts": "^5.0.1",
-    "sanity": "^3.57.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
