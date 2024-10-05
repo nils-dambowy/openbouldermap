@@ -34,6 +34,8 @@ export default function BoulderMarker() {
   })
 
   return marker_arr.map((pos) =>{
+    console.log("Entering map");
+    console.log("size of marker_arr: ", marker_arr.length);
     const identifier = uuidv7();
     const latlng = {"lat": pos.lat, "lng": pos.lng};
     console.log(latlng);
