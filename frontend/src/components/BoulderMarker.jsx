@@ -30,11 +30,8 @@ export default function BoulderMarker() {
   })
 
   return markerArr.map((pos) =>{
-    console.log("Entering map");
-    console.log("size of marker_arr: ", markerArr.length);
     const identifier = uuidv7();
     const latlng = {"lat": pos.lat, "lng": pos.lng};
-    console.log(latlng);
     return(
       <Marker position={latlng} key={identifier}>
           <Popup>You are here</Popup>
