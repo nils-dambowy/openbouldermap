@@ -21,22 +21,18 @@ export default function BoulderMarker() {
         try {
             const boulderData = await fetchBoulders();
             marker_arr.push(...boulderData);
-            console.log(marker_arr);
+            
         } catch (error) {
             console.error('Error fetching movies:', error);
         }
     };
 
     getMovies();  // Call the fetch function on component mount
+    console.log(marker_arr);
 }, []);
   
   useMapEvents({
     click(e) {
-      //map.locate()
-      // store boulder
-      //uploadBoulders("Boulder", String(p.lat) + "," + String(p.lng));
-      // 
-      //marker_arr.push(p);
       console.log(e.latlng);
       setPosition(e.latlng);
     },
@@ -44,9 +40,10 @@ export default function BoulderMarker() {
 
   return marker_arr.map((pos) =>{
     const identifier = uuidv7();
+    const latlng = [pos.lat, pos.long];
     return(
-      <Marker position={pos} key={identifier}>
-          <Popup>You are here</Popup>
+      <Marker position={latlng} key={identifier}>
+          <Popup>{pos.description}</Popup>
       </Marker>
     );
   });
