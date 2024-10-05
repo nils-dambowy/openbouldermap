@@ -10,5 +10,5 @@ createRoot(document.getElementById('root')).render(
       <section id="footer">
       <span>Please feel free to contribute to this project on <a href="https://github.com/nils-dambowy/openbouldermap" target="_blank" rel="noreferrer">GitHub</a></span>
       </section>
-      </StrictMode>
+    </StrictMode>
   )
