@@ -12,7 +12,7 @@ app.use(express.json());
 
 let db;
 
-MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+MongoClient.connect(uri)
   .then(client => {
     db = client.db('openbouldermap');  
     console.log('Connected to MongoDB');
@@ -29,6 +29,15 @@ app.post('/add-movie', async (req, res) => {
     res.status(500).json({ message: 'Error adding movie', error });
   }
 });
+
+app.get('/movies', async (req, res) => {
+    try {
+      const movies = await db.collection('boulders').find().toArray();
+      res.status(200).json(movies);
+    } catch (error) {
+      res.status(500).json({ message: 'Error fetching movies', error });
+    }
+  });
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
