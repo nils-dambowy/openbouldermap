@@ -9,6 +9,7 @@ export default function BoulderPopup() {
   const [tempMarkerObj, setTempMarker] = useState({});
   const [popUpopen, setPopup] = useState(false);
   const [boulderDescription, setDescription] = useState('');
+  const [boulderName, setName] = useState('');
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function BoulderPopup() {
 return(<>
     { popUpopen? 
     <div className="boulder-popup" ref={divRef}>
-        <h1>Name: </h1> <input type="text" placeholder={Name} onChange={(e) => setText(e.target.value)}/>
+        <h1>Name: </h1> <input type="text" placeholder={Name} onChange={(e) => setName(e.target.value)}/>
         <h2>Description: </h2> <input type="text" placeholder={description} onChange={(e) => setDescription(e.target.value)}/>
         <div className="boulder-popup-buttons">
         <button onClick={() => {
@@ -41,7 +42,7 @@ return(<>
 
         <button onClick={() => {
                                  L.marker(pos).bindPopup(boulderDescription).addTo(map);
-                                 addBoulder({description: text, lat: pos.lat, lng: pos.lng});
+                                 addBoulder({description: boulderDescription, lat: pos.lat, lng: pos.lng, name: boulderName});
                                  setPopup(false);
         }}>Confirm</button>
         </div>
