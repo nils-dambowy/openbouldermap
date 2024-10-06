@@ -32,8 +32,8 @@ export default function BoulderPopup() {
 return(<>
     { popUpopen? 
     <div className="boulder-popup" ref={divRef}>
-        <h1>Name: </h1> <input type="text" placeholder={Name} onChange={(e) => setName(e.target.value)}/>
-        <h2>Description: </h2> <input type="text" placeholder={description} onChange={(e) => setDescription(e.target.value)}/>
+        <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
+        <h2>Description: </h2> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
         <div className="boulder-popup-buttons">
         <button onClick={() => {
                                  map.removeLayer(tempMarkerObj);
