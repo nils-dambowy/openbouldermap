@@ -24,8 +24,7 @@ export default function BoulderMarker() {
 
   
   useMapEvents({
-    click(e) {
-      console.log(e.latlng);
+    click(e) { 
       setPosition(e.latlng);
     },
   })
@@ -35,7 +34,7 @@ export default function BoulderMarker() {
     const latlng = {"lat": pos.lat, "lng": pos.lng};
     return(
       <Marker position={latlng} key={identifier}>
-          <Popup><BoulderDescription name={pos.description} description={pos.description} /></Popup>
+          <Popup><BoulderDescription name={pos.name || 'Boulder name is missing :('} description={pos.description} /></Popup>
       </Marker>
     );
   });
