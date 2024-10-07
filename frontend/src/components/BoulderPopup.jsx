@@ -54,6 +54,9 @@ return(<>
                                              name: boulderName, 
                                              difficulty: boulderDifficulty});
                                  setPopup(false);
+                                 setDescription('');
+                                 setName('');
+                                 setDifficulty('');
         }}>Confirm</button>
         </div>
     </div> 
