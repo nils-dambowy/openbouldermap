@@ -2,9 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import { useMapEvents, useMap } from 'react-leaflet';
 import L from "leaflet";
 import { addBoulder } from '../util/services';
-import ReactDOM from "react-dom";
 import BoulderDescription from './BoulderDescription';
 import ReactDOMServer from "react-dom/server";
+import "../App.css";
+
 
 export default function BoulderPopup() {
   const map = useMap();
@@ -13,6 +14,7 @@ export default function BoulderPopup() {
   const [popUpopen, setPopup] = useState(false);
   const [boulderDescription, setDescription] = useState('');
   const [boulderName, setName] = useState('');
+  const [boulderDifficulty, setDifficulty] = useState('');
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -36,7 +38,8 @@ return(<>
     { popUpopen? 
     <div className="boulder-popup" ref={divRef}>
         <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
-        <h2>Description: </h2> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
+        <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
+        <h1>Difficulty: </h1> <input type="text" placeholder={boulderDifficulty} onChange={(e) => setDifficulty(e.target.value)}/>
         <div className="boulder-popup-buttons">
         <button onClick={() => {
                                  map.removeLayer(tempMarkerObj);
@@ -44,8 +47,12 @@ return(<>
         }}>Close</button>
 
         <button onClick={() => {
-                                 L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} />)).addTo(map);
-                                 addBoulder({description: boulderDescription, lat: pos.lat, lng: pos.lng, name: boulderName});
+                                 L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
+                                 addBoulder({description: boulderDescription, 
+                                             lat: pos.lat, 
+                                             lng: pos.lng, 
+                                             name: boulderName, 
+                                             difficulty: boulderDifficulty});
                                  setPopup(false);
         }}>Confirm</button>
         </div>
