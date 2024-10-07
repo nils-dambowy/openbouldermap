@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { useMapEvents, useMap } from 'react-leaflet';
 import L from "leaflet";
 import { addBoulder } from '../util/services';
+import ReactDOM from "react-dom";
+import BoulderDescription from './BoulderDescription';
+import ReactDOMServer from "react-dom/server";
 
 export default function BoulderPopup() {
   const map = useMap();
@@ -41,7 +44,7 @@ return(<>
         }}>Close</button>
 
         <button onClick={() => {
-                                 L.marker(pos).bindPopup(boulderDescription).addTo(map);
+                                 L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} />)).addTo(map);
                                  addBoulder({description: boulderDescription, lat: pos.lat, lng: pos.lng, name: boulderName});
                                  setPopup(false);
         }}>Confirm</button>
