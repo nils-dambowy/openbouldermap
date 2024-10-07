@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
 import { uuidv7 } from "uuidv7";
 import { fetchBoulders } from '../util/services';
+import BoulderDescription from './BoulderDescription';
 
 export default function BoulderMarker() {
   const [, setPosition] = useState(null);
@@ -23,8 +24,7 @@ export default function BoulderMarker() {
 
   
   useMapEvents({
-    click(e) {
-      console.log(e.latlng);
+    click(e) { 
       setPosition(e.latlng);
     },
   })
@@ -34,7 +34,11 @@ export default function BoulderMarker() {
     const latlng = {"lat": pos.lat, "lng": pos.lng};
     return(
       <Marker position={latlng} key={identifier}>
-          <Popup>{pos.description || 'Boulder description is missing :('}</Popup>
+          <Popup><BoulderDescription 
+            name={pos.name || 'Missing name'} 
+            description={pos.description || 'Missing description'} 
+            difficulty={pos.difficulty || 'Missing difficulty'} />
+          </Popup>
       </Marker>
     );
   });
