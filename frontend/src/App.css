@@ -165,8 +165,8 @@ This overwrites the black settings and adds the default text color
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 40vh;
-  right: 40vh;
+  top: 95px;
+  right: 10px;
   z-index: 10000;
   background-color: rgba(255, 255, 255, 0.734);
   color:#76777FFF;
@@ -195,4 +195,7 @@ This overwrites the black settings and adds the default text color
   height: 50px;
   margin: auto;
   display: block;
+}
+.boulder-popup-title{
+  text-align: center;
 }

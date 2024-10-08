@@ -10,7 +10,7 @@ import "../App.css";
 export default function BoulderPopup() {
   const map = useMap();
   const [pos, setPosition] = useState(null);
-  const [tempMarkerObj, setTempMarker] = useState({});
+  const [tempMarkerObj, setTempMarker] = useState({}); // ? 
   const [popUpopen, setPopup] = useState(false);
   const [boulderDescription, setDescription] = useState('');
   const [boulderName, setName] = useState('');
@@ -27,6 +27,7 @@ export default function BoulderPopup() {
   useMapEvents({
     click(e) {
      if(!popUpopen){
+        // is this still needed?
         setTempMarker(L.marker(e.latlng).addTo(map));
         setPosition(e.latlng);
         setPopup(true);
@@ -34,30 +35,33 @@ export default function BoulderPopup() {
     },
   })
 
-return(<>
+return(
+    <>
     { popUpopen? 
     <div className="boulder-popup" ref={divRef}>
+        <h1 className="boulder-popup-title">Options</h1>
         <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
         <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
         <h1>Difficulty: </h1> <input type="text" placeholder={boulderDifficulty} onChange={(e) => setDifficulty(e.target.value)}/>
         <div className="boulder-popup-buttons">
-        <button onClick={() => {
-                                 map.removeLayer(tempMarkerObj);
-                                 setPopup(false);
-        }}>Close</button>
+              <button onClick={() => {
+                                      map.removeLayer(tempMarkerObj);
+                                      setPopup(false);
+              }}>Close</button>
 
-        <button onClick={() => {
-                                 L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
-                                 addBoulder({description: boulderDescription, 
-                                             lat: pos.lat, 
-                                             lng: pos.lng, 
-                                             name: boulderName, 
-                                             difficulty: boulderDifficulty});
-                                 setPopup(false);
-                                 setDescription('');
-                                 setName('');
-                                 setDifficulty('');
-        }}>Confirm</button>
+              <button onClick={() => {
+                                      // temporary marker
+                                      L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
+                                      addBoulder({description: boulderDescription, 
+                                                  lat: pos.lat, 
+                                                  lng: pos.lng, 
+                                                  name: boulderName, 
+                                                  difficulty: boulderDifficulty});
+                                      setPopup(false);
+                                      setDescription('');
+                                      setName('');
+                                      setDifficulty('');
+              }}>Confirm</button>
         </div>
     </div> 
     : null}
