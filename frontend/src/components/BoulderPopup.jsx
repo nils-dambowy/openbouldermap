@@ -44,12 +44,14 @@ return(
         <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
         <h1>Difficulty: </h1> <input type="text" placeholder={boulderDifficulty} onChange={(e) => setDifficulty(e.target.value)}/>
         <div className="boulder-popup-buttons">
-              <button onClick={() => {
+              <button className="boulder-popup-close-button"
+                      onClick={() => {
                                       map.removeLayer(tempMarkerObj);
                                       setPopup(false);
               }}>Close</button>
 
-              <button onClick={() => {
+              <button className="boulder-popup-confirm-button" 
+                      onClick={() => {
                                       // temporary marker
                                       L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
                                       addBoulder({description: boulderDescription, 
