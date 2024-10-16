@@ -120,14 +120,6 @@ This overwrites the black settings and adds the default text color
   align-items: center;
 }
 
-/*
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  height: 50px;
-}
-*/
-
 /* need higher z-index than the searh bar to make sure the dropdown menu is not showing behind the search bar */
 .navdrop{
   z-index: 1000;
