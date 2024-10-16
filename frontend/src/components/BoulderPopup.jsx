@@ -5,12 +5,30 @@ import { addBoulder } from '../util/services';
 import BoulderDescription from './BoulderDescription';
 import ReactDOMServer from "react-dom/server";
 import "../App.css";
+import styled from "styled-components";
+
+const StyledBoulderPopup = styled.div`
+  padding: 1vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 95px;
+  right: 10px;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.807);
+  color:rgb(43, 43, 43);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height:30vh;
+  width:25vh;
+  justify-content: space-between;
+  `;
 
 
 export default function BoulderPopup() {
   const map = useMap();
   const [pos, setPosition] = useState(null);
-  const [tempMarkerObj, setTempMarker] = useState({}); // ? 
+  const [tempMarkerObj, setTempMarker] = useState({}); 
   const [popUpopen, setPopup] = useState(false);
   const [boulderDescription, setDescription] = useState('');
   const [boulderName, setName] = useState('');
@@ -38,7 +56,7 @@ export default function BoulderPopup() {
 return(
     <>
     { popUpopen? 
-    <div className="boulder-popup" ref={divRef}>
+    <StyledBoulderPopup ref={divRef}>
         <h1 className="boulder-popup-title">Options</h1>
         <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
         <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
@@ -65,7 +83,7 @@ return(
                                       setDifficulty('');
               }}>Confirm</button>
         </div>
-    </div> 
+     </StyledBoulderPopup>
     : null}
     </>
   );
