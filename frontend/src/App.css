@@ -160,18 +160,6 @@ This overwrites the black settings and adds the default text color
   box-shadow: 0 0 0 1px #000000;
 }
 
-.boulder-popup-close-button{
-  background-color: rgba(255, 0, 0, 0.734);
-  color:rgb(255, 255, 255);
-  margin-right: 1vh;
-}
-
-.boulder-popup-confirm-button{
-  background-color: #2cdd19;
-  color:rgb(255, 255, 255);
-  margin-right: 1vh;
-}
-
 
 /* fixes the issue that the text color of the results is white*/
 .results{

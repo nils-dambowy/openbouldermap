@@ -29,6 +29,17 @@ const StyledBoulderPopupTitle = styled.h1`
   color:rgb(43, 43, 43);
 `;
 
+const StyledBoulderPopupClose = styled.button`
+  background-color: rgba(255, 0, 0, 0.734);
+  color:rgb(255, 255, 255);
+  margin-right: 1vh;
+`;
+
+const StyledBoulderPopupConfirm = styled.button`
+  background-color: #2cdd19;
+  color:rgb(255, 255, 255);
+  margin-right: 1vh;
+`;
 
 export default function BoulderPopup() {
   const map = useMap();
@@ -66,27 +77,28 @@ return(
         <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
         <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
         <h1>Difficulty: </h1> <input type="text" placeholder={boulderDifficulty} onChange={(e) => setDifficulty(e.target.value)}/>
-        <div className="boulder-popup-buttons">
-              <button className="boulder-popup-close-button"
-                      onClick={() => {
-                                      map.removeLayer(tempMarkerObj);
-                                      setPopup(false);
-              }}>Close</button>
+        <div>
+              <StyledBoulderPopupClose
+                onClick={() => {
+                  map.removeLayer(tempMarkerObj);
+                  setPopup(false);
+                }}
+               >Close</StyledBoulderPopupClose>
 
-              <button className="boulder-popup-confirm-button" 
-                      onClick={() => {
-                                      // temporary marker
-                                      L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
-                                      addBoulder({description: boulderDescription, 
-                                                  lat: pos.lat, 
-                                                  lng: pos.lng, 
-                                                  name: boulderName, 
-                                                  difficulty: boulderDifficulty});
-                                      setPopup(false);
-                                      setDescription('');
-                                      setName('');
-                                      setDifficulty('');
-              }}>Confirm</button>
+              <StyledBoulderPopupConfirm
+               onClick={() => {
+                  // temporary marker
+                  L.marker(pos).bindPopup(ReactDOMServer.renderToString(<BoulderDescription name={boulderName} description={boulderDescription} difficulty={boulderDifficulty} />)).addTo(map);
+                  addBoulder({description: boulderDescription, 
+                              lat: pos.lat, 
+                              lng: pos.lng, 
+                              name: boulderName, 
+                              difficulty: boulderDifficulty});
+                  setPopup(false);
+                  setDescription('');
+                  setName('');
+                  setDifficulty('');
+                }}>Confirm</StyledBoulderPopupConfirm>
         </div>
      </StyledBoulderPopup>
     : null}
