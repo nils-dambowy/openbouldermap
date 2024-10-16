@@ -138,29 +138,6 @@ This overwrites the black settings and adds the default text color
   padding: 1vh;
 }
 
-.edit-location-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10000;
-  background-color: white;
-  color:#76777FFF;
-  border-radius: 15px;
-  box-shadow: 0 0 0 1px #000000;
-}
-
-.edit-layer-button {
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  z-index: 10000;
-  background-color: white;
-  color:#76777FFF;
-  border-radius: 15px;
-  box-shadow: 0 0 0 1px #000000;
-}
-
-
 /* fixes the issue that the text color of the results is white*/
 .results{
   background-color: white;
