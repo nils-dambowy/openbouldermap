@@ -1,7 +1,18 @@
 import { useEffect, useRef} from 'react';
-import "../App.css";
 import L from "leaflet";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  z-index: 10000;
+  background-color: white;
+  color:#76777FFF;
+  border-radius: 15px;
+  box-shadow: 0 0 0 1px #000000;
+`;
 
 export default function ChangeMapButton({URL, changeMapFunction}) {
 
@@ -28,13 +39,11 @@ export default function ChangeMapButton({URL, changeMapFunction}) {
     };
 
     return(
-        <button
+        <StyledButton
         type="button"
         ref={btnRef}
         className="edit-layer-button"
         onClick={handleButtonClick}
-         >
-        Change map
-      </button>
+         >Change Map</StyledButton>
     )
 }

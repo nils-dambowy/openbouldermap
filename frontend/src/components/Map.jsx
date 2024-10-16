@@ -1,7 +1,6 @@
 import { MapContainer, TileLayer} from 'react-leaflet';
 import { useState} from 'react';
 import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
-import "../App.css";
 import LocateButton from './LocateButton';
 import ChangeMapButton from './ChangeMapButton';
 import BoulderMarker from './BoulderMarker';
