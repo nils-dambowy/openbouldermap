@@ -1,6 +1,5 @@
 import BoulderIcon from '../assets/boulder-icon.png';
 import styled from 'styled-components';
-import "../App.css";
 
 const StyledImg = styled.img`
   width: 50px;

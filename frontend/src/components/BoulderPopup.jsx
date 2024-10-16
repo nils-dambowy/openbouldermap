@@ -4,7 +4,6 @@ import L from "leaflet";
 import { addBoulder } from '../util/services';
 import BoulderDescription from './BoulderDescription';
 import ReactDOMServer from "react-dom/server";
-import "../App.css";
 import styled from "styled-components";
 
 const StyledBoulderPopup = styled.div`
