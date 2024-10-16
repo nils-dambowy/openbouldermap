@@ -160,23 +160,6 @@ This overwrites the black settings and adds the default text color
   box-shadow: 0 0 0 1px #000000;
 }
 
-.boulder-popup{
-  padding: 1vh;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 95px;
-  right: 10px;
-  z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.807);
-  color:rgb(43, 43, 43);
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  height:30vh;
-  width:25vh;
-  justify-content: space-between;
-}
-
 .boulder-popup-close-button{
   background-color: rgba(255, 0, 0, 0.734);
   color:rgb(255, 255, 255);
@@ -194,9 +177,4 @@ This overwrites the black settings and adds the default text color
 .results{
   background-color: white;
   color:#76777FFF;
-}
-
-.boulder-popup-title{
-  text-align: center;
-  color:rgb(43, 43, 43);
 }

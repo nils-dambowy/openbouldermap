@@ -24,6 +24,11 @@ const StyledBoulderPopup = styled.div`
   justify-content: space-between;
   `;
 
+const StyledBoulderPopupTitle = styled.h1`
+  text-align: center;
+  color:rgb(43, 43, 43);
+`;
+
 
 export default function BoulderPopup() {
   const map = useMap();
@@ -57,7 +62,7 @@ return(
     <>
     { popUpopen? 
     <StyledBoulderPopup ref={divRef}>
-        <h1 className="boulder-popup-title">Options</h1>
+        <StyledBoulderPopupTitle>Options</StyledBoulderPopupTitle>
         <h1>Name: </h1> <input type="text" placeholder={boulderName} onChange={(e) => setName(e.target.value)}/>
         <h1>Description: </h1> <input type="text" placeholder={boulderDescription} onChange={(e) => setDescription(e.target.value)}/>
         <h1>Difficulty: </h1> <input type="text" placeholder={boulderDifficulty} onChange={(e) => setDifficulty(e.target.value)}/>
