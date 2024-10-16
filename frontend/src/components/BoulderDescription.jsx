@@ -1,5 +1,12 @@
 import BoulderIcon from '../assets/boulder-icon.png';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+BoulderDescription.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  difficulty: PropTypes.string.isRequired,
+};
 
 const StyledImg = styled.img`
   width: 50px;
