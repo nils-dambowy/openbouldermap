@@ -5,7 +5,9 @@ import './App.css'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <h1> 🏔️open <span className="text-backg "><span className="text-backg-span">BoulderMap</span></span>🏔️</h1>
+        <div className="title-container">
+            <h1> 🏔️open <span className="text-backg "><span className="text-backg-span">BoulderMap</span></span>🏔️</h1>
+        </div>
         <App/>
         <section id="footer">
             <span>Please feel free to contribute to this project on <a

@@ -51,6 +51,18 @@ This overwrites the black settings and adds the default text color
   font-size: 2.25em;
 }
 
+@media screen and (max-width: 500px) {
+  .title-container {
+    visibility: hidden;
+    height: 0vh;
+    width: 0vw;
+  }
+}
+
+.title-container {
+  opacity: 100;
+}
+
 .text-backg{
   display: inline-block;
   background-color: #6d6c6a; /* Set the background color */
