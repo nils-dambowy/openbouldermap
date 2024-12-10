@@ -6,31 +6,6 @@ html, body {
   width: 100%;
 }
 
-/* overwrites the default bootstrap container */
-@media (min-width: 768px){
-  .container{
-    max-width:80% !important;
-  }  
-}
-
-@media (min-width: 992px){
-  .container{
-    max-width:80% !important;
-  }
-}
-
-@media (min-width: 1200px){
-  .container{
-    max-width:80% !important;
-  }  
-}
-
-@media (min-width: 1400px){
-  .container{
-    max-width:80% !important;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
