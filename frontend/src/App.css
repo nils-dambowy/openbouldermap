@@ -26,11 +26,6 @@ This overwrites the black settings and adds the default text color
   z-index: 500;
 }
 
-.leaflet-container {
-  border-radius: 15px;
-  box-shadow: 0 0 0 8px #fff;
-}
-
 #root {
   width: 100vw;
   height: 100vh;
@@ -51,11 +46,25 @@ This overwrites the black settings and adds the default text color
   font-size: 2.25em;
 }
 
+/* mobile screen settings*/
 @media screen and (max-width: 500px) {
   .title-container {
     visibility: hidden;
     height: 0vh;
     width: 0vw;
+  }
+
+  .leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 0 0px #fff !important;
+  }
+
+  #footer{
+    height: 0vh !important;
+    padding: 0vh !important;
   }
 }
 
@@ -91,27 +100,13 @@ This overwrites the black settings and adds the default text color
 }
 /* height of the container */
 .leaflet-container {
-  height: 80vh; 
+  height: 80vh;
   margin-top: 3vh;
   width: 80vw;
+  border-radius: 15px;
+  box-shadow: 0 0 0 8px #fff;
 }
 
-.container .navbar-container{
-  height:50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* need higher z-index than the searh bar to make sure the dropdown menu is not showing behind the search bar */
-.navdrop{
-  z-index: 1000;
-}
 
 #footer{
   height: 1vh;

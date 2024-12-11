@@ -4,14 +4,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  z-index: 10000;
-  background-color: white;
-  color:#76777FFF;
-  border-radius: 15px;
-  box-shadow: 0 0 0 1px #000000;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 10000;
+    background-color: white;
+    border-radius: 0px;
+    /* mobile screen settings*/
+    @media screen and (max-width: 500px) {
+        top: 100px;
+        right: 10px;
+    }
 `;
 
 export default function ChangeMapButton({URL, changeMapFunction}) {

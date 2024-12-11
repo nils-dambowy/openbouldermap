@@ -7,20 +7,27 @@ import ReactDOMServer from "react-dom/server";
 import styled from "styled-components";
 
 const StyledBoulderPopup = styled.div`
-  padding: 1vh;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 95px;
-  right: 10px;
-  z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.807);
-  color:rgb(43, 43, 43);
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  height:30vh;
-  width:25vh;
-  justify-content: space-between;
+    padding: 1vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 95px;
+    right: 10px;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.807);
+    color:rgb(43, 43, 43);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height:30vh;
+    width:25vh;
+    justify-content: space-between;
+
+    /* mobile screen settings*/
+    @media screen and (max-width: 500px) {
+        top: 145px;
+        right: 10px;
+    }
+    
   `;
 
 const StyledBoulderPopupTitle = styled.h1`
