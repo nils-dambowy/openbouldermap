@@ -4,14 +4,17 @@ import L from "leaflet";
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10000;
-  background-color: white;
-  color:#76777FFF;
-  border-radius: 15px;
-  box-shadow: 0 0 0 1px #000000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+    background-color: white;
+    border-radius: 1px;
+    /* mobile screen settings*/
+    @media screen and (max-width: 500px) {
+        top: 60px;
+        right: 10px;
+    }
 `;
 
 export default function LocateButton() {
