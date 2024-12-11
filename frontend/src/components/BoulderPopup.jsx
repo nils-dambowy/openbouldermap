@@ -25,7 +25,6 @@ const StyledBoulderPopup = styled.div`
     /* mobile screen settings*/
     @media screen and (max-width: 500px) {
         top: 145px;
-        right: 10px;
     }
     
   `;

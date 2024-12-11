@@ -13,7 +13,6 @@ const StyledButton = styled.button`
     /* mobile screen settings*/
     @media screen and (max-width: 500px) {
         top: 100px;
-        right: 10px;
     }
 `;
 

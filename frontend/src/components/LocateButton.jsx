@@ -11,9 +11,9 @@ const StyledButton = styled.button`
     background-color: white;
     border-radius: 1px;
     /* mobile screen settings*/
+    
     @media screen and (max-width: 500px) {
         top: 60px;
-        right: 10px;
     }
 `;
 
